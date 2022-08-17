@@ -14,9 +14,9 @@ public class Deposit {
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         int depositType = scanner.nextInt();
 
-        double profit = new Deposit().calculateBalance(depositType, amount, period);
+        double balance = new Deposit().calculateBalance(depositType, amount, period);
         DecimalFormat df = new DecimalFormat("#,###.##");
-        System.out.printf("Результат вклада: %d за %d лет превратятся в %s%n", amount, period, df.format(profit));
+        System.out.printf("Результат вклада: %d за %d лет превратятся в %s%n", amount, period, df.format(balance));
     }
 
     double calculateComplexPercent(double amount, double yearRate, int years) {
